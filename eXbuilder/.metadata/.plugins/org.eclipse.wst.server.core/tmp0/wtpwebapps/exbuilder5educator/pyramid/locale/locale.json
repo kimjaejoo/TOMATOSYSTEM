@@ -1,0 +1,176 @@
+{
+    "ko": 
+    {
+        "_comment": "Korean",
+        "input": 
+        {
+            "num": 
+            {
+                "target": "",
+                "source": ""
+            },
+
+            "date": 
+            {
+                "target": "",
+                "source": ""
+            }
+        },
+
+        "output": 
+        {
+            "num": 
+            {
+                "_comment": "replace target Character with Source.",
+                "target": ",",
+                "source": "%"
+            },
+
+            "date": 
+            {
+                "target": "",
+                "source": ""
+            }
+        },
+
+        "calendar": 
+        {
+            "year": "년",
+            "month": "월",
+            "day": "일, 월, 화, 수, 목, 금, 토",
+            "today": "Today"
+        }
+    },
+
+    "en": 
+    {
+        "_comment": "English",
+        "input": 
+        {
+            "num": 
+            {
+                "_comment": "replace target Character with Source.",
+                "target": ",",
+                "source": "$"
+            },
+
+            "date": 
+            {
+                "target": "년월일시분초",
+                "source": "YMDtms"
+            }
+        },
+
+        "output": 
+        {
+            "num": 
+            {
+                "_comment": "replace target Character with Source.",
+                "target": ",",
+                "source": "$"
+            },
+
+            "date": 
+            {
+                "target": "년월일시분초",
+                "source": "YMDtms"
+            }
+        },
+
+        "calendar": 
+        {
+            "year": "Y",
+            "month": "M",
+            "day": "S, M, Tu, W, Th, F, Sa",
+            "today": "Today"
+        }
+    },
+
+    "ch": 
+    {
+        "_comment": "China",
+        "input": 
+        {
+            "num": 
+            {
+                "target": ",",
+                "source": "¥"
+            },
+
+            "date": 
+            {
+                "target": "년월일시분초",
+                "source": "年月日時分秒"
+            }
+        },
+
+        "output": 
+        {
+            "num": 
+            {
+                "_comment": "replace target Character with Source.",
+                "target": ",",
+                "source": "%"
+            },
+
+            "date": 
+            {
+                "target": "년월일시분초",
+                "source": "年月日時分秒"
+                
+            }
+        },
+
+        "calendar": 
+        {
+            "year": "年",
+            "month": "月",
+            "day": "日, 月, 火, 水, 木, 金, 土",
+            "today": "今天"
+        }
+    },
+
+    "tu": 
+    {
+        "_comment": "Turkey",
+        "input": 
+        {
+            "num": 
+            {
+                "_comment": "replace target Character with Source.",
+                "target": ",",
+                "source": " "
+            },
+
+            "date": 
+            {
+                "target": "",
+                "source": ""
+            }
+        },
+
+        "output": 
+        {
+            "num": 
+            {
+                "_comment": "replace target Character with Source.",
+                "target": ",",
+                "source": ""
+            },
+
+            "date": 
+            {
+                "target": "",
+                "source": ""
+            }
+        },
+
+        "calendar": 
+        {
+            "year": "Y",
+            "month": "A",
+            "day": "S, M, Tu, W, Th, F, Sa",
+            "today": "Bugün"
+        }
+    }
+}

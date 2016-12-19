@@ -1,0 +1,759 @@
+* {
+    tmt-linebreak: auto;
+    color: black;
+    background-color: white;
+    font-family: 돋움;
+    font-weight: normal;
+    font-size: 11px;
+    vertical-align: middle;
+    opacity: 1.0;
+    padding: 0px;
+    text-align: left;
+    border: none;
+    text-decoration: none;
+    border-width: 1px;
+}
+
+htmlobject {
+    background-color: #FFFFFF;
+    border: 1px solid;
+}
+
+.selection {
+    background-color: #a8d1ff;
+    background-image: none;
+    border-radius: 0px;
+    border: dotted 1px #808080;
+    color: black;
+}
+
+.disabled-rect {
+    background-color: rgba(230, 230, 230, 0.2);
+}
+
+.focus-ring {
+    border: dotted 1px #808080;
+}
+
+body {
+    background-color: white;
+}
+
+scrollbar {
+    background-color: #F1F1F1;
+}
+
+xection {
+    border: none;
+    border-radius: 1px;
+    background-color: #ffffff;
+}
+
+.xection-xr {
+    border: none;
+    border-radius: 0px;
+    background-color: transparent;
+}
+
+.xection-xd {
+    border: none;
+    border-radius: 0px;
+    background-color: transparent;
+}
+
+group {
+    border: solid 1px #ccc;
+    border-radius: 4px;
+    background-color: transparent;
+}
+
+scrollablegroup {
+    border: solid 1px #ccc;
+    border-radius: 4px;
+    background-color: transparent;
+}
+
+import {
+    border-width: 1px;
+    border-style: none;
+    border-color: #000000;
+    border-radius: 0px;
+    background-color: white;
+}
+
+tab {
+    border: solid 1px #ccc;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+progress {
+	border: solid 1px gray;
+	background-color :white;
+	color : #0099FF;
+}
+
+input, textarea, secret {
+    background-color: white;
+    border: solid 1px gray;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0) 5px);
+}
+
+input[readonly=true] {
+    font-family: 돋움체;
+    color: #333333;
+    background-color: #eeeeee;
+    font-size: 12px;
+    border: solid 1px #c2c1c1;
+}
+
+input>button {
+    border-radius: 0px;
+}
+
+.input-rightBtn {
+    background-image: url(../images/search.png);
+}
+
+textarea {
+    /* line-height : 180%; */
+    vertical-align: top;
+    line-height: 5;
+}
+
+combobox {
+    background-color: white;
+    border: solid 1px gray;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0) 5px);
+}
+
+combobox:disabled {
+    background: linear-gradient(#ccc, #ccc);
+    color: gray;
+}
+
+combobox:focus, input:focus, textarea:focus, secret:focus, list:focus, treeview:focus {
+    box-shadow: 0px 0px 5px cornFlowerBlue;
+}
+
+button {
+    text-align: center;
+    vertical-align: middle;
+    text-shadow: 0px 1px 1px white;
+    background-image: linear-gradient(#fff, #f0f0f0);
+    border-radius: 4px;
+    border: solid 1px #bbb;
+    line-height: 180%;
+}
+
+dragbutton {
+    text-align: center;
+    vertical-align: middle;
+    text-shadow: 0px 1px 1px white;
+    background: linear-gradient(#fff, #f0f0f0);
+    border-radius: 4px;
+    border: solid 1px #bbb;
+    line-height: 180%;
+}
+
+button.spin-up, button.spin-down {
+    border-radius: 0px;
+}
+
+menu {
+    border: solid 1px gray;
+}
+
+button:hover {
+    background-image: linear-gradient(#fff, #e6e6e6);
+    border: solid 1px #a2a2a2;
+}
+
+button:active {
+    background-image: linear-gradient(#aeaeae, #fff);
+    padding-top: 2px;
+}
+
+button:disabled {
+    color: #888;
+}
+
+button[tab] {
+    border: solid 1px gray;
+    border-bottom: none;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    background-image: linear-gradient(#dcdcdc, #eaeaea);
+}
+
+button[tab]:active {
+    padding-top: 2px;
+    padding-bottom: 0px;
+    border: solid 1px gray;
+}
+
+button[tab]:hover {
+    border: solid 1px gray;
+    border-bottom: none;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    background-image: linear-gradient(white, #eee);
+}
+
+button[tab]:checked {
+    border: solid 1px gray;
+    border-bottom: none;
+    background-image: linear-gradient(white, #eee);
+}
+
+dragbutton:hover {
+    background-image: linear-gradient(#fff, #e6e6e6);
+    border: solid 1px #a2a2a2;
+}
+
+dragbutton:active {
+    background-image: linear-gradient(#eeeded, #fff);
+    padding-top: 2px;
+}
+
+dragbutton:disabled {
+    color: #888;
+}
+
+dragbutton[tab] {
+    border: solid 1px gray;
+    border-bottom: none;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    background-image: linear-gradient(#dcdcdc, #eaeaea);
+}
+
+dragbutton[tab]:active {
+    padding-top: 2px;
+    padding-bottom: 0px;
+    border: solid 1px gray;
+}
+
+dragbutton[tab]:hover {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    background-image: linear-gradient(white, #eee);
+    border: solid 1px gray;
+}
+
+dragbutton[tab]:checked {
+    background-image: linear-gradient(white, #eee);
+    border: solid 1px gray;
+}
+
+combobox>button {
+    box-shadow: none;
+    border-radius: 0px;
+    background-image: none;
+    background-color: transparent;
+    border: none;
+    color: black;
+}
+
+combobox>button:focus {
+    box-shadow: none;
+    border-radius: 0px;
+    background-image: none;
+    background-color: transparent;
+    border: none;
+    color: black;
+}
+
+combobox>button:active {
+    box-shadow: none;
+    border-radius: 0px;
+    background-image: none;
+    background-color: transparent;
+    border: none;
+    color: black;
+}
+
+suggestcombo {
+    background-color: white;
+    border: solid 1px gray;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0) 5px);
+}
+
+suggestcombo>input {
+    box-shadow: none;
+    border-radius: 0px;
+    background-image: none;
+    background-color: transparent;
+    border: none;
+    color: black;
+}
+
+suggestcombo>button {
+    box-shadow: none;
+    border-radius: 0px;
+    background-image: none;
+    background-color: transparent;
+    border: none;
+    color: black;
+}
+
+suggestcombo>button:hover {
+    box-shadow: none;
+    border-radius: 0px;
+    background-image: none;
+    background-color: transparent;
+    border: none;
+    color: black;
+}
+
+suggestcombo>button:active {
+    box-shadow: none;
+    border-radius: 0px;
+    background-image: none;
+    background-color: transparent;
+    border: none;
+    color: black;
+}
+
+checkbox {
+    font-size: 11pt;
+    font-family: 굴림;
+    text-align: left;
+    background-color: transparent;
+    border-width: 1px;
+    border-style: none;
+    border-color: gray;
+    border-radius: 0px;
+}
+
+checkbox:disabled {
+    color: gray;
+    background-color: #ccc;
+}
+
+.checkbox-item {
+}
+
+radio {
+    font-size: 11pt;
+    font-family: 굴림;
+    text-align: left;
+    background-color: transparent;
+    border-width: 1px;
+    border-style: none;
+    border-color: gray;
+    border-radius: 0px;
+}
+
+.radio-item {
+}
+
+combobox>list {
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+check-button {
+    background-color: orange;
+}
+
+/* List/TreeView CSS Start */
+list, treeview {
+    border: solid 1px gray;
+}
+
+.list-item {
+    border-radius: 0px;
+    border-style: none;
+    background-color: transparent;
+    color: black;
+    font-size: 12px;
+}
+
+.list-selection {
+    background-color: #e6e6e6;
+    background-image: none;
+    border-radius: 0px;
+    border: dotted 1px #808080;
+    color: black;
+}
+
+.treeview-selection {
+    background-color: #e6e6e6;
+    background-image: none;
+    border-radius: 0px;
+    border: dotted 1px #808080;
+    color: black;
+}
+
+.treeview-minus {
+    border-color: black;
+    border-width: 1px;
+    color: white;
+}
+
+.treeview-plus {
+    border-color: black;
+    border-width: 1px;
+    color: white;
+}
+
+.treeview-checkbox {
+    border-color: black;
+    border-width: 1px;
+    color: white;
+}
+/* List/TreeView CSS End */
+
+slide>button {
+    border-radius: 0px;
+}
+
+slide {
+    border: solid 1px gray;
+}
+
+tooltip {
+    background-color: white;
+    color: black;
+    text-align: center;
+    border-radius: 4px;
+    border: solid 1px gray;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.6);
+}
+
+/* Scroll CSS Start */
+.scrollbar-thumb {
+    background-color: orange;
+}
+
+.scroll-btn {
+    background-color: #F1F1F1;
+}
+
+.scroll-btn-hover {
+    background-color: #cfcfcf;
+}
+
+.scroll-btn-active {
+    background-color: #8f8f8f;
+}
+/* Scroll CSS End */
+
+label {
+    font-size: 11pt;
+    font-weight: normal;
+    border-width: 1px;
+    border-style: none;
+    border-color: gray;
+    background-color: transparent;
+    font-family: 굴림;
+    color: black;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+output {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+line {
+    border: solid 1px black;
+}
+
+rectangle {
+    border: solid 1px black;
+}
+
+ellipse {
+    border: solid 1px black;
+}
+
+roundrect {
+    border: solid 1px black;
+}
+
+/* Image CSS Start */
+image {
+    background-color: transparent;
+}
+
+.updated-row-image {
+    background-image: url(../images/builder2/row-update.jpg);
+}
+
+.updated-sel-row-image {
+    background-image: url(../images/builder2/row-sel-update.jpg);
+}
+
+.added-row-image {
+    background-image: url(../images/builder2/row-add.jpg);
+}
+
+.added-sel-row-image {
+    background-image: url(../images/builder2/row-sel-add.jpg);
+}
+
+.deleted-row-image {
+    background-image: url(../images/builder2/row-delete.jpg);
+}
+
+.deleted-sel-row-image {
+    background-image: url(../images/builder2/row-sel-delete.jpg);
+}
+
+.default-row-image {
+    background-image: url(../images/builder2/row-open.jpg);
+}
+
+.default-sel-row-image {
+    background-image: url(../images/builder2/row-sel-open.jpg);
+}
+/* Image CSS End */
+
+/* Repeat CSS Start */
+repeat {
+    border: solid 1px gray;
+    border-radius: 0px;
+}
+
+repeat>group {
+    border: none;
+}
+
+repeat>rowgroup {
+    border: none;
+}
+
+repeat>group>* {
+    border-radius: 0px;
+    box-shadow: none;
+    border: solid 1px gray;
+    /* background-color: transparent; */
+}
+
+repeat>rowgroup>* {
+    border-radius: 0px;
+    box-shadow: none;
+    border: solid 1px gray;
+    background-color: transparent;
+}
+
+repeat>group>scrollbar {
+    background-color: #F1F1F1;
+    border: none;
+}
+
+repeat>rowgroup>scrollbar {
+    background-color: #F1F1F1;
+    border: none;
+}
+
+repeat>group>button {
+    /* button쪽에서 바꿀 까봐 임시로 넣음*/
+    background-image: linear-gradient(#f8f8f8, #e5e5e5);
+    background-color: #f8f8f8;
+    border-radius: 0px;
+    border: solid 1px #c5c5c5;
+}
+
+repeat>rowgroup>button {
+    /* button쪽에서 바꿀 까봐 임시로 넣음*/
+    background-image: linear-gradient(#f8f8f8, #e5e5e5);
+    background-color: #f8f8f8;
+    border-radius: 0px;
+    border: solid 1px #c5c5c5;
+}
+
+repeat>group>checkbox {
+    border-style: none;
+}
+
+repeat>rowgroup>checkbox {
+    border-style: none;
+}
+
+repeat>group>label {
+    font-size: 10pt;
+    font-weight: normal;
+    border-width: 1px;
+    border-style: none;
+    border-color: gray;
+    background-color: transparent;
+    font-family: 굴림;
+    color: black;
+    background-color : rgba(0, 0, 0, 0);
+}
+
+repeat>rowgroup>label {
+    font-size: 10pt;
+    font-weight: normal;
+    border-width: 1px;
+    border-style: none;
+    border-color: gray;
+    background-color: transparent;
+    font-family: 굴림;
+    color: black;
+    background-color : rgba(0, 0, 0, 0);
+}
+
+repeat>group>output {
+    border-style: none;
+}
+
+repeat>rowgroup>output {
+    border-style: none;
+}
+
+repeat>group>radio {
+    border-style: none;
+}
+
+repeat>rowgroup>radio {
+    border-style: none;
+}
+
+
+/* Freeform 일 경우에만 적용되는 스타일 Start */
+repeat[freeform='True']>rowgroup>input, repeat[freeform='True']>rowgroup>textarea , repeat[freeform='True']>rowgroup>secret {
+    background-color: white;
+}
+
+repeat[freeform='True']>rowgroup>combobox:focus, repeat[freeform='True']>rowgroup>input:focus,
+repeat[freeform='True']>rowgroup>textarea:focus, repeat[freeform='True']>rowgroup>secret:focus,
+repeat[freeform='True']>rowgroup>list:focus{
+    box-shadow: 0px 0px 5px cornFlowerBlue;
+}
+/* Freeform 일 경우에만 적용되는 스타일 End */
+
+.repeat-focus-row {
+    background-color: #e0e0e0;
+}
+
+.repeat-over-row {
+    background-color: #ededed;
+}
+
+.repeat-between-row {
+    background-color: #fafafa;
+}
+
+.repeat-row-line {
+    color: #ededed;
+}
+
+.repeat-drag-ctrl {
+    border: dotted 2px #808080;
+}
+
+.repeat-fixed-col {
+    border: double 1px #c5c5c5;
+}
+
+.repeat-focus-col {
+    border: dotted 1px #000000;
+}
+/* Repeat CSS End */
+
+/* Calendar CSS Start */
+calendar {
+    border: solid 1px #707070;
+    content: "theme : gray";
+}
+
+.calendar-icon {
+    background-image: url(../images/grayCalendar.png);
+}
+
+.calendar-icon-disable {
+    background-image: url(../images/grayCalendarD.png);
+}
+
+.rectangle-cal {
+    border: solid 0px black;
+}
+
+.rectangle-cal-today {
+    border: solid 1px #808080;
+    border-radius: 5px;
+}
+
+.calendar-top-rect {
+    border: solid 1px gray;
+    background-color: #707070;
+    color: white;
+    font: bold 12px tahoma;
+}
+
+.calendar-top-rect2 {
+    background: #707070;
+}
+
+.calendar-bottom-rect {
+    border: solid 1px gray;
+    background-color: #c0c0c0;
+    color: white;
+    font: bold 14px sans-serif;
+}
+
+.calendar-bottom-rect2 {
+    background: #e7e7e7;
+}
+
+.calendar-bottom-btn-rect {
+    border: solid 1px gray;
+    background-color: #ffffff;
+    color: white;
+    font: bold 14px sans-serif;
+}
+
+.calendar-bottom-btn-rect2 {
+    background: #c0c0c0;
+}
+
+.calendar-day-rect {
+    border: solid 1px #c0c0c0;
+    background: #c0c0c0;
+}
+
+.calendar-day-rect2 {
+    background: #e7e7e7;
+}
+
+.calendar-day {
+    border: solid 1px gray;
+    background-color: orange;
+    color: #000000;
+    font: bold 12px sans-serif;
+}
+
+.calendar-today {
+    border: solid 1px gray;
+    background-color: #cacaca;
+    color: #000;
+    font: bold 11px tahoma;
+}
+
+.calendar-spin-rect {
+    border: solid 1px #555555;
+    background-color: transparent;
+}
+
+.calendar-triangle-rect {
+    border: solid 1px #2d2d2d;
+    background-color: #ffffff;
+}
+
+.calendar-this-date {
+    color: #000;
+    font: normal 11px 나눔고딕;
+}
+
+.calendar-prev-date {
+    color: #909090;
+    font: 11px sans-serif;
+}
+
+.calendar-click-date {
+    color: #000;
+    font: bold 15px 나눔고딕;
+}
+/* Calendar CSS End */
