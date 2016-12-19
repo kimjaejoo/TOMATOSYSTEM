@@ -1,0 +1,92 @@
+
+body { 
+	background-color : #E4E7EC;
+}
+
+group {
+	background-color :  #ffffff;
+}
+
+button {
+	background-image :none;
+	background-color : #edf1f6;
+	border-radius : 2px;
+	border : solid 1px #E7E7E7;
+	color : #6E7DA3;
+}
+
+input{
+	background-image :nonde;
+	background : none;
+	border-radius : 3px;
+	border: solid 1px #ccc;
+}
+
+label {
+	text-align:center;
+	vertical-align:middle;
+}
+
+group>label{
+	font-family: Dotum;
+	font-size : 9pt;
+	color:#535c70;
+	background-color:#f0f1f6;
+	border-width:1;
+	border-color:#DfDfd1;
+	border-style:solid;	
+}
+
+.lblTitle{
+	background-image :none;
+	background-color :#F5F5F5 ;
+	text-align : left;
+	padding-left : 20px;
+	font-size : 20px;
+	color : #3F6BD8;
+	border-top : solid 3px #5B73AE;
+}
+
+
+.lblTitleCtd{
+	font-family: Dotum;
+	font-size : 9pt;
+	color:#535c70;
+	background-color:#f0f1f6;
+	border-width:1;
+	border-color:#DfDfd1;
+	border-style:solid;
+	text-align:center;
+	vertical-align:middle;
+}
+
+repeat {
+	border: solid 1px #ccc;
+}
+
+repeat>rowgroup>input, repeat>rowgroup>output {
+	border: solid 1px #E6EAF6;
+}
+repeat[freeform='True'] {
+	border-radius : 4px;
+	border: solid 1px #ccc;
+}
+repeat[freeform='True']>rowgroup>input,   repeat[freeform='True']>rowgroup>output{
+	border-radius : 3px;
+	padding-left : 5px;
+	border: solid 1px #ccc;
+}
+repeat[freeform="True"]>rowgroup>label {
+	color:#535c70;
+	text-align:center;
+	vertical-align:middle;
+	font-size : 9pt;
+}
+
+repeat>group>button {
+	background-image:none;
+	background-color : #D4DCF5;
+	border: solid 1px #a5b6de;
+	color : #575B60;
+	
+}

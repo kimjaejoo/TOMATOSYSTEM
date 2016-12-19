@@ -1,0 +1,482 @@
+* {
+	tmt-linebreak: auto;
+	color: black;
+	background-color: white;
+	font-family: sans-serif;
+	font-weight: normal;
+	font-size: 11px;
+	vertical-align: middle;
+	opacity: 1.0;
+	padding: 0px;
+	text-align: left;
+	border: none;
+	text-decoration: none;
+	border-width: 0px;
+}
+
+.disabled-rect {
+    background-color: rgba(230, 230, 230, 0.2);
+}
+
+.calendar-icon{
+	background-image : url(../images/grayCalendar.png);
+}
+
+.calendar-icon-disable{
+	background-image : url(../images/grayCalendarD.png);
+}
+
+.selection {
+	background-color: #ffe9ea;
+	background-image: none;
+	border-radius: 0px;
+	border: none;
+	color: black;
+}
+
+.focus-ring {
+	border: dotted 1px red;
+}
+
+body {
+	background-color: white;
+}
+
+scrollbar {
+	background-color: #F1F1F1;
+}
+
+group {
+	border: solid 1px #9b1a23;
+	border-radius: 4px;
+	background-color: white;
+}
+
+import {
+	border-width: 1px;
+	border-style: none;
+	border-color: #000000;
+	border-radius: 0px;
+	background-color: white;
+}
+
+tab {
+	border: solid 1px #9b1a23;
+	background-image: linear-gradient(#9b1a23 0%, #9b1a23 2%, rgba(255, 255, 255, 0)
+		3%);
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+}
+
+progress {
+	border: solid 1px #9b1a23;
+	background-color :white;
+	color : #0099FF;
+}
+
+input, textarea, secret {
+	background-color: white;
+	border: solid 1px #9b1a23;
+	background-image: linear-gradient(#ccc, rgba(255, 255, 255, 0) 5px);
+}
+
+input>button {
+	border-radius: 0px;
+}
+
+textarea {
+	vertical-align: top;
+}
+
+combobox {
+	background-color: white;
+	border: solid 1px #9b1a23;
+	background-image: linear-gradient(#ccc, rgba(255, 255, 255, 0) 5px);
+}
+
+combobox:disabled {
+	background: linear-gradient(#ccc, #ccc);
+	color: gray;
+}
+
+.scrollbar {
+	background-color: white;
+}
+
+combobox:focus, input:focus, textarea:focus, secret:focus, list:focus,
+	treeview:focus {
+	box-shadow: 0px 0px 5px DarkRed;
+}
+
+button {
+	text-align: center;
+	vertical-align: middle;
+	color: white;
+	text-shadow: 0px -1px 0px black;
+	background: linear-gradient(#961921, #bb3941);
+	border-radius: 4px;
+	border: solid 1px #9b1a23;
+}
+
+button.spin-up, button.spin-down {
+	border-radius: 0px;
+}
+
+menu {
+	border: solid 1px gray;
+}
+
+Button:hover {
+	background-image: linear-gradient(#bb3941, #961921);
+	border: solid 1px #9b1a23;
+}
+
+Button:active {
+	background-image: linear-gradient(#bb3941, #961921);
+	padding-top: 2px;
+}
+
+button:disabled {
+	color: #888;
+}
+
+button[tab] {
+	border: solid 1px #9b1a23;
+	border-bottom: none;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+	background-image: linear-gradient(#961921, #bb3941);
+}
+
+button[tab]:active {
+	padding-top: 2px;
+	padding-bottom: 0px;
+	border: solid 1px #9b1a23;
+}
+
+button[tab]:hover {
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+	background-image: linear-gradient(#bb3941, #961921);
+	border: solid 1px #9b1a23;
+}
+
+button[tab]:checked {
+	background-image: linear-gradient(#bb3941, #961921);
+	border: solid 1px #9b1a23;
+}
+
+combobox>button {
+	box-shadow: none;
+	border-radius: 0px;
+	background-image: linear-gradient(#961921, #bb3941);
+	border: solid 1px #9b1a23;
+}
+
+combobox:hover>button {
+	background: linear-gradient(#bb3941, #961921);
+}
+
+combobox:active>button {
+	background-image: linear-gradient(#bb3941, #961921);
+}
+
+checkbox {
+	font-size: 11pt;
+	font-family: 굴림;
+	text-align: left;
+	background-color: transparent;
+	border-width: 1px;
+	border-style: none;
+	border-color: #9b1a23;
+	border-radius: 4px;
+}
+
+checkbox:disabled {
+	color: gray;
+	background-color: gray;
+}
+
+radio {
+	font-size: 11pt;
+	font-family: 굴림;
+	text-align: left;
+	background-color: transparent;
+	border-width: 1px;
+	border-style: none;
+	border-color: #9b1a23;
+	border-radius: 4px;
+}
+
+list, treeview {
+	border: solid 1px #9b1a23;
+}
+
+.list-item {
+	border-radius: 0px;
+	border-style: none;
+	background-color: transparent;
+	color: black;
+	font-size: 12px;
+}
+
+combobox>list {
+	box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+check-button {
+	background-color: orange;
+}
+
+slide>button {
+	border-radius: 0px;
+}
+
+slide {
+	border: solid 1px #9b1a23;
+}
+
+tooltip {
+	background-color: white;
+	color: black;
+	text-align: center;
+	border-radius: 4px;
+	border: solid 1px gray;
+	box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.6);
+}
+
+.scrollbar-thumb {
+	background-color: orange;
+}
+
+.scroll-btn {
+	background-color: #F1F1F1;
+}
+
+.scroll-btn-hover {
+	background-color: #cfcfcf;
+}
+
+.scroll-btn-active {
+	background-color: #8f8f8f;
+}}
+
+label {
+	font-size: 11pt;
+	font-weight: normal;
+	border-width: 1px;
+	border-style: none;
+	border-color: #9b1a23;
+	background-color: transparent;
+	font-family: 굴림;
+	color: black;
+	background-color: rgba(0, 0, 0, 0);
+}
+
+output {
+	background-color: rgba(0, 0, 0, 0);
+}
+
+line {
+	border: solid 1px black;
+}
+
+rectangle {
+	border: solid 1px #000000;
+}
+
+ellipse {
+	border: solid 1px black;
+}
+
+roundrect {
+	border: solid 1px black;
+}
+
+image {
+	background-color: transparent;
+}
+
+.updated-row-image {
+	background-image: url(../images/builder2/row-update.jpg); 
+}
+.updated-sel-row-image {
+	background-image: url(../images/builder2/row-sel-update.jpg); 
+}
+.added-row-image {
+		background-image: url(../images/builder2/row-add.jpg);
+}
+.added-sel-row-image {
+		background-image: url(../images/builder2/row-sel-add.jpg);
+}
+.deleted-row-image {
+		background-image: url(../images/builder2/row-delete.jpg);
+}
+.deleted-sel-row-image {
+		background-image: url(../images/builder2/row-sel-delete.jpg);
+}
+.default-row-image {
+		background-image: url(../images/builder2/row-open.jpg);
+}
+.default-sel-row-image {
+		background-image: url(../images/builder2/row-sel-open.jpg);
+}
+repeat {
+	border: solid 1px #9b1a23;
+	border-radius: 1px;
+}
+
+repeat>group>* {
+	border-radius: 0px;
+	box-shadow: none;
+	border: solid 1px gray;
+	background-color: transparent;
+}
+
+repeat>group>button {
+	/* button쪽에서 바꿀 까봐 임시로 넣음*/
+	background: linear-gradient(#961921, #bb3941);
+	background-color: #bb3941;
+	color: #ffffff;
+	border: solid 1px #9b1a23;
+}
+
+repeat>group>button:hover {
+	background: linear-gradient(#bb3941, #961921);
+}
+
+repeat>group>button:focus {
+	/* button쪽에서 바꿀 까봐 임시로 넣음*/
+	background: linear-gradient(#bb3941, #961921);
+}
+
+repeat>group>output {
+	border: none;
+	font-size: 10px;
+}
+
+repeat>group>input:focus {
+	box-shadow: none;
+}
+
+.repeat-focus-row {
+	background-color: #ffe9ea;
+}
+
+.repeat-over-row {
+	background-color: #fff6ec;
+}
+
+.repeat-between-row {
+	background-color: #fbfbfb;
+}
+
+.repeat-row-line {
+	color: #ededed;
+}
+
+.repeat-drag-ctrl {
+	border: dotted 2px #808080;
+}
+
+.repeat-fixed-col {
+	border: double 1px #961921;
+}
+
+.repeat-focus-col {
+	border: dotted 1px #961921;
+}
+
+calendar {
+	border: solid 1px #9b1a23;
+	content: "theme : red";
+}
+
+.rectangle-cal {
+	border: solid 0px black;
+}
+
+.rectangle-cal-today {
+	border: solid 1px #ffffff;
+	border-radius: 5px;
+}
+
+.calendar-top-rect {
+	border: solid 1px gray;
+	background-color: #9b1a23;
+	color: white;
+	font: bold 12px tahoma;
+}
+
+.calendar-top-rect2 {
+	background: #7d151d;
+}
+
+.calendar-day-rect {
+	border: solid 1px #e2505a;
+	background: #c1202c;
+}
+
+.calendar-day-rect2 {
+	background: #e4616a;
+}
+
+.calendar-bottom-rect {
+	border: solid 1px gray;
+	background-color: #9b1a23;
+	color: white;
+	font: bold 14px sans-serif;
+}
+
+.calendar-bottom-rect2 {
+	background: #7d151d;
+}
+
+.calendar-bottom-btn-rect {
+	border: solid 1px gray;
+	background-color: #7d151d;
+	color: white;
+	font: bold 14px sans-serif;
+}
+
+.calendar-bottom-btn-rect2 {
+	background: #9b1a23;
+}
+
+.calendar-day {
+	border: solid 1px gray;
+	background-color: orange;
+	color: #e8e8e8;
+	font: bold 12px sans-serif;
+}
+
+.calendar-today {
+	border: solid 1px #ff5353;
+	background-color: #ff5353;
+	color: #ffffff;
+	font: bold 11px tahoma;
+}
+
+.calendar-spin-rect {
+	border: solid 1px #000000;
+	background-color: transparent;
+}
+
+.calendar-triangle-rect {
+	border: solid 1px #2d2d2d;
+	background-color: #ffffff;
+}
+
+.calendar-this-date {
+	color: #000;
+	font: normal 11px 나눔고딕;
+}
+
+.calendar-prev-date {
+	color: #909090;
+	font: 11px sans-serif;
+}
+
+.calendar-click-date {
+	color: #000;
+}

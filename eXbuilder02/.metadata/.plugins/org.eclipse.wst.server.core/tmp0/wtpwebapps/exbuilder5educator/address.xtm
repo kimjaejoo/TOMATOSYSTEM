@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xhtml:html xmlns="http://www.w3.org/TR/xforms" xmlns:xhtml="http://www.w3.org/TR/xhtml11" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/TR/xml-events" xmlns:ms="urn:schemas-microsoft-com:xslt" xmlns:user="http://www.tomatosystem.co.kr/namespace">
+	<xhtml:head>
+		<link rel="stylesheet" type="text/css" href="./abk.css"/>
+		<xhtml:title>address Book</xhtml:title>
+		<xhtml:meta name="version" content="2.0"/>
+		<xhtml:meta name="template" content="address"/>
+		<xhtml:meta name="author" content="TOMATOSYSTEM"/>
+		<xhtml:meta name="date" content="2016-08-31"/>
+		<xhtml:meta name="description" content="First Page"/>
+		<model>
+			<submission id="subList" method="post" mediatype="application/x-www-form-urlencoded" replace="instance" add="False" action="./addressList.jsp" ref="/root/requestList" responseref="/root/responseList" sync="True" massdata="False" encoded="True" progressimg="False"/>
+			<submission id="subInsert" method="post" mediatype="application/x-www-form-urlencoded" replace="instance" add="False" action="./addressInsert.jsp" ref="/root/requestSave" responseref="/root/responseSave" sync="True" massdata="False" encoded="True" progressimg="False"/>
+			<submission id="subUpdate" method="post" mediatype="application/x-www-form-urlencoded" replace="instance" add="False" action="./addressUpdate.jsp" ref="/root/requestSave" responseref="/root/responseSave" sync="True" massdata="False" encoded="True" progressimg="False"/>
+			<submission id="subDelete" method="post" mediatype="application/x-www-form-urlencoded" replace="instance" add="False" action="./addressDelete.jsp" ref="/root/requestSave" responseref="/root/responseSave" sync="True" massdata="False" encoded="True" progressimg="False"/>
+			<instance>
+				<root xmlns="">
+					<requestList>
+						<searchName/>
+					</requestList>
+					<responseList>
+						<addressList>
+							<list>
+								<seq/>
+								<name/>
+								<zipcode/>
+								<address/>
+								<officetel/>
+								<hptel/>
+							</list>
+						</addressList>
+					</responseList>
+					<requestSave>
+						<addressList>
+							<list>
+								<seq/>
+								<name/>
+								<zipcode/>
+								<address/>
+								<officetel/>
+								<hptel/>
+							</list>
+						</addressList>
+					</requestSave>
+					<responseSave/>
+				</root>
+			</instance>
+			<script id="ModelConstructDone" type="javascript" ev:event="xforms-model-construct-done">
+				<![CDATA[
+						doList();
+						]]>
+			</script>
+		</model>
+		<script type="javascript" src="./tafCommon.js"/>
+		<script type="javascript">
+			<![CDATA[
+			    /***********************************************************************
+				* Global Variable Setup
+				* Repeat Sort Supporting Variable
+				* It is set up according to the number of sort in Repeat. True – ascending order, False –descending order
+				***********************************************************************/
+				var GSort1 = "true";
+			
+			    /***********************************************************************
+				* Search Button Click
+				***********************************************************************/
+				function doList(){
+					 // Submission Calling
+					 model.send("subList");
+					 // Error Treatment
+					 var strMessage = model.get( "/root/@message" ); 
+					 if(strMessage != ""){
+						model.msgbox(strMessage,"");
+						return;
+					}else{
+						//Repeat Control of List part renews searched data-instance.
+						model.rebuildControl("rpt");
+						// Get Repeat Control Object
+						var varRpt = model.getControl("rpt");
+						// Select the first row of Repeat Control
+						varRpt.selectRow(1);
+					}
+				}
+				
+			    /***********************************************************************
+				* Click New button
+				***********************************************************************/
+				function doNew(){
+					// Rest Instance inside Repeat Control of Input part
+					model.resetInstance("","/root/requestSave/addressList/list",true);
+					// Repeat Control of Input part renews resetted Instance
+					model.rebuildControl("rptSub");
+					// Move focus to "name" Control
+					model.setFocus("ipbNameDetail");					
+				}
+				
+			    /***********************************************************************
+				*  Click Delete button
+				***********************************************************************/
+				function doDelete(){
+					// Check table key value
+					var strConfig = model.get("/root/requestSave/addressList/list/seq");
+					if(strConfig == "")
+					{
+						// Warining window
+						model.msgbox("There is not deleted value.","");
+						return;
+					}
+					// Check windown
+					//return : 'Yes: 6', 'No: 7', 'Cancel : 2'
+					var varCheck = model.msgbox( "Do you want to delete it?" , "YESNO" );
+					// Executed only in the case of "Yes"
+					if(varCheck  != 6) return;
+					// Call Submission
+					model.send("subDelete");
+					// Error Treatment
+					var strMessage = model.get( "/root/@message" ); 
+					if(strMessage != ""){
+						model.msgbox(strMessage,"");
+						return;
+					}else{
+						// Call doNew() to reset Repeat Control of Input part after deleting
+						doNew();
+						// Call doList() to clear deleted data in List part.
+						doList();
+					}
+				}
+				
+				
+			    /***********************************************************************
+				* Click Save button
+				***********************************************************************/
+				function doSave(){
+					// Check searching condition
+					var strConfig = model.get("/root/requestSave/addressList/list/name");
+					if(strConfig == "")
+					{
+						// Warning window
+						model.msgbox("Name is essential value.", "" );
+						return;
+					}
+					// Check table key value
+				    var tranGbn = model.get("/root/requestSave/addressList/list/seq");
+					// Call Submission according to whether table key value is possessed or not
+					if(tranGbn == "")
+						model.send("subInsert");
+					else
+						model.send("subUpdate");
+					// Error Treatment
+					var strMessage = model.get( "/root/@message" ); 
+					if(strMessage != ""){
+						model.msgbox(strMessage,"");
+						return;
+					}
+					// Call doList() to renew List part after normally editing and inputting
+					doList();
+				}
+				
+			    /***********************************************************************
+				* Select Repeat Row
+				* In order to send selected value in List part to Repeat Control of Input part,
+				* copy data by using Instance.
+				***********************************************************************/
+				function doSelect(){
+					// Create Repeat Control Object in List part
+					var varCtlrpt      =  model.getControl( "rpt" );
+					// Create row [1base] selected in Repeat Control of List part
+					var varSelectedRow   =  varCtlrpt.getIndex();
+					// Treat exceptional condition in selected row
+					if( varSelectedRow == null || varSelectedRow <= 0  || varSelectedRow > varCtlrpt.rowCount() )
+					{
+						return;
+					}
+					// Selected row of Instance node mapped to Repeat Control of List part 
+					var varListPath   = model.getAttr("rpt",    "nodeset") + "[" + varSelectedRow + "]/";
+					var varInsertPath = model.getAttr("rptSub", "nodeset") + "/"; 
+					// Copy to Repeat Control Ref node in Repeat Control Ref node of List part	
+					model.copyNodeValue( varInsertPath + "seq" ,      varListPath + "seq" );
+					model.copyNodeValue( varInsertPath + "name" ,     varListPath + "name" );
+					model.copyNodeValue( varInsertPath + "zipcode" ,  varListPath + "zipcode" );
+					model.copyNodeValue( varInsertPath + "address" ,  varListPath + "address" );
+					model.copyNodeValue( varInsertPath + "officetel", varListPath + "officetel" );
+					model.copyNodeValue( varInsertPath + "hptel" ,    varListPath + "hptel" );
+					// Repeat Control of Input part renews copied Instance.
+					model.rebuildControl("rptSub");
+					// Move focus to "name" Control
+					model.setFocus("ipbNameDetail");
+				}
+			]]>
+		</script>
+	</xhtml:head>
+	<xhtml:body bgcolor="#E4E7EC" style="pagetype:custom; pagewidth:700; pageheight:600; pageorientation:portrait; font-family:돋움; font-size:9; font-orientation:0; color:#000000; pagedirection:portrait; pagemargin-top:5; pagemargin-left:5; pagemargin-bottom:5; pagemargin-right:5; gridmargin-top:5; gridmargin-left:5; gridmargin-bottom:5; gridmargin-right:5; gridsize:5; ">
+		<label id="lblTitle" navindex="0" class="lblTitle" style="left:0px; top:0px; width:700px; height:55px; ">
+			<![CDATA[address Book]]>
+		</label>
+		<group id="grpSearch" navindex="0" style="left:10px; top:70px; width:675px; height:470px; ">
+			<repeatex id="rpt" navindex="1450" nodeset="/root/responseList/addressList/list" splitpos="20" grid="True" style="left:15px; top:85px; width:640px; height:170px; ">
+				<script id="script7" type="javascript" ev:event="rowselect">
+					<![CDATA[doSelect();]]>
+				</script>
+				<header rowheight="20px">
+					<trigger id="btnSeq" navindex="0" gridindex="1" style="left:0px; top:0px; width:45px; height:20px; ">
+						<label>
+							<![CDATA[seq]]>
+						</label>
+					</trigger>
+					<trigger id="btnName" navindex="0" gridindex="2" style="left:44px; top:0px; width:70px; height:20px; ">
+						<label>
+							<![CDATA[name]]>
+						</label>
+					</trigger>
+					<trigger id="btnZipCode" navindex="0" gridindex="3" style="left:113px; top:0px; width:75px; height:20px; ">
+						<label>
+							<![CDATA[zipcode]]>
+						</label>
+					</trigger>
+					<trigger id="btnAddress" navindex="0" gridindex="4" style="left:187px; top:0px; width:290px; height:20px; ">
+						<label>
+							<![CDATA[address]]>
+						</label>
+					</trigger>
+					<trigger id="btnOfficeTel" navindex="0" gridindex="5" style="left:476px; top:0px; width:75px; height:20px; ">
+						<label>
+							<![CDATA[officeTel]]>
+						</label>
+					</trigger>
+					<trigger id="btnHpTel" navindex="0" gridindex="6" style="left:550px; top:0px; width:75px; height:20px; ">
+						<label>
+							<![CDATA[mobile]]>
+						</label>
+					</trigger>
+				</header>
+				<detail rowheight="19px">
+					<output id="optSeq" colindex="0" ref="/root/responseList/addressList/list/seq" gridindex="1" style="left:0px; top:0px; width:45px; height:20px; "/>
+					<output id="optName" colindex="0" ref="/root/responseList/addressList/list/name" gridindex="2" style="left:44px; top:0px; width:70px; height:20px; "/>
+					<output id="optZipCode" colindex="0" ref="/root/responseList/addressList/list/zipcode" datatype="string" format="###-###" gridindex="3" style="left:113px; top:0px; width:75px; height:20px; "/>
+					<output id="optAddress" colindex="0" ref="/root/responseList/addressList/list/address" gridindex="4" style="left:187px; top:0px; width:290px; height:20px; "/>
+					<output id="optOfficeTel" colindex="0" ref="/root/responseList/addressList/list/officetel" gridindex="5" style="left:476px; top:0px; width:75px; height:20px; "/>
+					<output id="optHpTel" colindex="0" ref="/root/responseList/addressList/list/hptel" gridindex="6" style="left:550px; top:0px; width:75px; height:20px; "/>
+				</detail>
+			</repeatex>
+			<repeatex id="rptSub" navindex="1570" nodeset="/root/requestSave/addressList/list" freeform="True" style="left:15px; top:270px; width:640px; height:160px; ">
+				<detail rowheight="158px">
+					<label id="lblSeqDetail" colindex="0" style="left:0px; top:7px; width:100px; height:18px; ">
+						<![CDATA[seq]]>
+					</label>
+					<label id="lblNameDetail" colindex="0" style="left:0px; top:35px; width:100px; height:20px; ">
+						<![CDATA[name]]>
+					</label>
+					<label id="lblOfficeTelDetail" colindex="0" style="left:0px; top:65px; width:100px; height:20px; ">
+						<![CDATA[officeTel]]>
+					</label>
+					<label id="lblHpTel" colindex="0" style="left:0px; top:95px; width:100px; height:20px; ">
+						<![CDATA[mobile]]>
+					</label>
+					<label id="lblAddress" colindex="0" style="left:0px; top:125px; width:100px; height:20px; ">
+						<![CDATA[address]]>
+					</label>
+					<output id="optSeqDetail" colindex="0" ref="/root/requestSave/addressList/list/seq" style="left:99px; top:5px; width:220px; height:20px; "/>
+					<input id="ipbNameDetail" colindex="1470" ref="/root/requestSave/addressList/list/name" maxlength="50" imemode="korean" style="left:99px; top:35px; width:220px; height:20px; "/>
+					<input id="ipbOfficeDetail" colindex="1490" ref="/root/requestSave/addressList/list/officetel" maxlength="30" style="left:99px; top:65px; width:220px; height:20px; "/>
+					<input id="ipbHpTelDetail" colindex="1510" ref="/root/requestSave/addressList/list/hptel" maxlength="30" style="left:99px; top:95px; width:220px; height:20px; "/>
+					<input id="ipbZipCodeDetail" colindex="1530" ref="/root/requestSave/addressList/list/zipcode" maxlength="20" datatype="string" editmask="###-###" style="left:99px; top:125px; width:100px; height:20px; "/>
+					<input id="ipbAddressDetail" colindex="1550" ref="/root/requestSave/addressList/list/address" maxlength="255" imemode="korean" style="left:200px; top:125px; width:425px; height:20px; "/>
+				</detail>
+			</repeatex>
+			<group id="group21" navindex="1590" style="left:15px; top:15px; width:640px; height:45px; ">
+				<trigger id="btnSave" navindex="1600" style="left:575px; top:10px; width:55px; height:20px; ">
+					<label>
+						<![CDATA[save]]>
+					</label>
+					<script id="script10" type="javascript" ev:event="DOMActivate">
+						<![CDATA[doSave();]]>
+					</script>
+				</trigger>
+				<trigger id="btnDelete" navindex="1620" style="left:502px; top:10px; width:55px; height:20px; ">
+					<label>
+						<![CDATA[delete]]>
+					</label>
+					<script id="script9" type="javascript" ev:event="DOMActivate">
+						<![CDATA[doDelete();]]>
+					</script>
+				</trigger>
+				<trigger id="btnNew" navindex="1640" style="left:431px; top:10px; width:55px; height:20px; ">
+					<label>
+						<![CDATA[New]]>
+					</label>
+					<script id="script6" type="javascript" ev:event="DOMActivate">
+						<![CDATA[doNew();]]>
+					</script>
+				</trigger>
+				<trigger id="btnSearch" navindex="1660" style="left:355px; top:10px; width:55px; height:20px; ">
+					<label>
+						<![CDATA[search]]>
+					</label>
+					<script id="script5" type="javascript" ev:event="DOMActivate">
+						<![CDATA[doList();]]>
+					</script>
+				</trigger>
+				<input id="ipbNameSearch" navindex="1680" class="ipbAbk" ref="/root/requestList/searchName" imemode="korean" style="left:89px; top:10px; width:100px; height:20px; "/>
+				<label id="lblNameSearch" navindex="0" class="lblTitleCtd" style="left:15px; top:10px; width:70px; height:20px; ">
+					<![CDATA[Name]]>
+				</label>
+			</group>
+		</group>
+	</xhtml:body>
+</xhtml:html>

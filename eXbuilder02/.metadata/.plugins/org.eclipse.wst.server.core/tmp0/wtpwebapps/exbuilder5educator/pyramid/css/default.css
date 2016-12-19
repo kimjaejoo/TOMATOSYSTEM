@@ -1,0 +1,391 @@
+* {
+	tmt-linebreak: auto;
+	color: black;
+	background-color: white;
+	font-family: NanumGothic;
+	font-weight: normal;
+	font-size: 12px;
+	vertical-align: middle;
+	opacity: 1.0;
+	padding: 0px;
+	text-align: left;
+	border: none;
+	text-decoration: none;
+	border-width: 0px;
+}
+
+.disabled-rect {
+    background-color: rgba(230, 230, 230, 0.2);
+}
+
+.calendar-icon{
+	background-image : url(../images/calendar.png);
+}
+
+.calendar-icon-disable{
+	background-image : url(../images/calendarD.png);
+}
+
+.selection {
+	background-color: #3399FF;
+	background-image: none;
+	border-radius: 0px;
+	border: none;
+	color: white;
+}
+
+.focus-ring {
+	border: dotted 1px black;
+}
+
+body {
+	background-color: white;
+}
+
+scrollbar {
+	background-color: #F1F1F1;
+}
+
+group {
+	border-width: 2px;
+	border-style: inset;
+	border-color: #9d9d9d;
+}
+
+import {
+	border-width: 1px;
+	border-style: none;
+	border-color: #000000;
+}
+
+tab {
+	border-width: 2px;
+	border-style: inset;
+	border-color: #9d9d9d;
+}
+progress {
+	color : #0099FF;
+	background-color :white;
+	border-width: 2px;
+	border-color: #9d9d9d;
+	border-style: inset;
+}
+input {
+	text-align: left;
+	vertical-align: middle;
+	background-color: #ffffff;
+	border-width: 2px;
+	border-color: #9d9d9d;
+	border-style: inset;
+}
+
+secret {
+	text-align: left;
+	vertical-align: middle;
+	background-color: #ffffff;
+	border-width: 2px;
+	border-color: #9d9d9d;
+	border-style: inset;
+}
+
+textarea {
+	text-align: left;
+	vertical-align: top;
+	background-color: #ffffff;
+	border-width: 2px;
+	border-color: #9d9d9d;
+	border-style: inset;
+}
+
+radio {
+	text-align: left;
+	background-color: transparent;
+	border-width: 1px;
+	border-style: none;
+	border-color: #000000;
+}
+
+checkbox {
+	text-align: left;
+	background-color: transparent;
+	border-width: 1px;
+	border-style: none;
+	border-color: #000000;
+}
+
+slide {
+	border-width: 2px;
+	border-style: inset;
+	border-color: #9d9d9d;
+}
+
+combobox {
+	color: black;
+	background-color: #ffffff;
+	border-color: #9d9d9d;
+	border-width: 2px;
+	border-style: inset;
+}
+
+combobox:focus, input:focus, textarea:focus {
+	box-shadow: 0px 0px 5px cornFlowerBlue;
+}
+
+button {
+	border-width: 2px;
+	border-style: outset;
+	border-color: #9d9d9d;
+	background-color: #ececec;
+	text-align: center;
+	vertical-align: middle;
+}
+
+button:active {
+	border-style: inset;
+	padding-top: 2px;
+}
+
+menu {
+	border: solid 1px gray;
+}
+
+button:disabled {
+	color: #888;
+}
+
+button[tab] {
+	box-shadow: none;
+	border: none;
+	border-bottom: none;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+button[tab]:active {
+	padding-top: 2px;
+}
+
+button[tab]:checked {
+	background-color: white;
+	border: solid 1px black;
+}
+
+list {
+	background-color: #ffffff;
+	border-color: #9d9d9d;
+	border-width: 2px;
+	border-style: inset;
+}
+
+.list-selection {
+	background-color: #3399FF;
+	background-image: none;
+	border-radius: 0px;
+	border: none;
+	color: white;
+}
+
+treeview {
+	border-width: 2px;
+	border-style: inset;
+	border-color: #9d9d9d;
+	background-color: #ffffff;
+}
+
+.treeview-selection {
+	background-color: #e6e6e6;
+	background-image: none;
+	border-radius: 0px;
+	border: dotted 1px #808080;
+	color: black;
+}
+
+.treeview-minus {
+	border-color : black;
+	border-width : 1px;
+	color : white;
+}
+
+.treeview-plus {
+	border-color : black;
+	border-width : 1px; 
+	color : white;
+}
+
+.treeview-checkbox {
+	border-color : black;
+	border-width : 1px; 
+	color : white;
+}
+
+.list-item {
+	border-radius: 0px;
+	border-style: none;
+	background-color: transparent;
+	color: black;
+}
+
+combobox>list {
+	border-width: 1px;
+	border-style: solid;
+	box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+repeat {
+	background-color: #ffffff;
+	border-width: 2px;
+	border-style: inset;
+	border-color: #9d9d9d;
+}
+
+repeat>group>* {
+	border-radius: 0px;
+	box-shadow: none;
+	border: solid 1px gray;
+	background-color: transparent;
+}
+
+repeat>group>button {
+	
+}
+
+check-button {
+	background-color: orange;
+}
+
+tooltip {
+	background-color: #ffffff;
+	color: #000000;
+	border-color: #000000;
+	text-align: center;
+	border-radius: 5px;
+	text-shadow: 0px -1px 0px navy;
+}
+
+.scrollbar-thumb {
+	background-color: orange;
+}
+
+arrowbutton {
+	background-color: #ccc;
+}
+
+arrowbutton:hover {
+	background-color: #ddd;
+}
+
+arrowbutton:active {
+	background-color: #8f8f8f;
+}
+
+output {
+	text-align: left;
+	vertical-align: middle;
+	background-color: transparent;
+	border-width: 1px;
+	border-color: #000000;
+	border-style: none;
+}
+
+label {
+	text-align: left;
+	vertical-align: middle;
+	border-width: 1px;
+	border-color: #000000;
+	border-style: none;
+	background-color: transparent;
+}
+
+line {
+	border: solid 1px #000000;
+}
+
+rectangle {
+	border: solid 1px #000000;
+}
+
+ellipse {
+	border: solid 1px #000000;
+}
+
+roundrect {
+	border: solid 1px #000000;
+}
+
+image {
+	background-color: transparent;
+}
+.updated-row-image {
+	background-image: url(../images/builder2/row-update.jpg); 
+}
+.updated-sel-row-image {
+	background-image: url(../images/builder2/row-sel-update.jpg); 
+}
+.added-row-image {
+		background-image: url(../images/builder2/row-add.jpg);
+}
+.added-sel-row-image {
+		background-image: url(../images/builder2/row-sel-add.jpg);
+}
+.deleted-row-image {
+		background-image: url(../images/builder2/row-delete.jpg);
+}
+.deleted-sel-row-image {
+		background-image: url(../images/builder2/row-sel-delete.jpg);
+}
+.default-row-image {
+		background-image: url(../images/builder2/row-open.jpg);
+}
+.default-sel-row-image {
+		background-image: url(../images/builder2/row-sel-open.jpg);
+}
+
+calendar {
+	border: solid 1px #000000;
+	content: "theme : default";
+}
+
+.calendar-line {
+	border: solid 1px #000080;
+}
+
+.calendar-top-rect {
+	border: solid 1px #99B4D1;
+	background-color: #99B4D1;
+	color: white;
+	font: bold 14px sans-serif;
+}
+
+.calendar-day {
+	border: solid 1px #ff0080;
+	background-color: #808000;
+	color: #408080;
+	font: bold 12px sans-serif;
+}
+
+.calendar-today {
+	border: solid 1px #ff5b5b;
+	background-color: #c8c8ff;
+	color: #000;
+	font: bold 12px sans-serif;
+}
+
+.calendar-spin-rect {
+	border: solid 1px #000000;
+	background-color: #ffffff;
+}
+
+.calendar-triangle-rect {
+	border: solid 1px #000000;
+	background-color: #000000;
+}
+
+.calendar-this-date {
+	color: #000;
+	font: normal 11px 나눔고딕;
+}
+
+.calendar-prev-date {
+	color: #909090;
+	font: 11px sans-serif;
+}
