@@ -1,0 +1,461 @@
+* {
+	tmt-linebreak: auto;
+	color: black;
+	background-color: white;
+	font-family: sans-serif;
+	font-weight: normal;
+	font-size: 11px;
+	vertical-align: middle;
+	opacity: 1.0;
+	padding: 0px;
+	text-align: left;
+	border: none;
+	text-decoration: none;
+	border-width: 1px;
+}
+
+.calendar-icon{
+	background-image : url(../images/grayCalendar.png);
+}
+
+.calendar-icon-disable{
+	background-image : url(../images/grayCalendarD.png);
+}
+
+.selection {
+	background-color: tomato;
+	background-image: none;
+	border-radius: 0px;
+	border-style: none;
+	color: white;
+}
+
+.focus-ring {
+	border: dotted 1px tomato;
+}
+
+body {
+	background-color: orange;
+}
+
+scrollbar {
+	background-color: #F1F1F1;
+}
+
+group {
+	border: solid 1px #ccc;
+	border-radius: 4px;
+	background-color: white;
+}
+
+import {
+	border-width: 1px;
+	border-style: none;
+	border-color: #000000;
+	border-radius: 0px;
+	background-color: white;
+}
+
+tab {
+	border: solid 1px #ccc;
+	background-image: linear-gradient(#eaeaea 0%, #eaeaea 2%, rgba(255, 255, 255, 0)
+		3%);
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+}
+
+input, textarea, secret {
+	background-color: white;
+	border: solid 1px gray;
+	background-image: linear-gradient(#ccc, rgba(255, 255, 255, 0) 5px);
+	border-radius: 4px;
+}
+
+input>button {
+	border-radius: 0px;
+}
+
+textarea {
+	vertical-align: top;
+}
+
+combobox {
+	background-color: white;
+	border: solid 1px gray;
+	background-image: linear-gradient(#ccc, rgba(255, 255, 255, 0) 5px);
+	border-radius: 5px;
+}
+
+combobox:disabled {
+	background: linear-gradient(#ccc, #ccc);
+	color: gray;
+}
+
+combobox > list {
+	background-color: red;
+	box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+combobox:focus, input:focus, textarea:focus, secret:focus, list:focus,
+	treeview:focus {
+	box-shadow: 0px 0px 5px tomato;
+	border-color: tomato;
+}
+
+button {
+	text-align: center;
+	vertical-align: middle;
+	text-shadow: 0px 1px 1px white;
+	background: linear-gradient(#fafafa, #f1f1f1);
+	border-radius: 10px;
+	border: solid 1px #aaa;
+	box-shadow:0px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+button.spin-up, button.spin-down {
+	border-radius: 0px;
+}
+
+menu {
+	border: solid 1px gray;
+}
+
+Button:hover {
+	background-image: linear-gradient(#fff, #e6e6e6);
+	border: solid 1px #a2a2a2;
+}
+
+button:active {
+	background-image: linear-gradient(#aaa, #eee 3px, #e6e6e6);
+	padding-top: 2px;
+}
+
+button:disabled {
+	color: #888;
+}
+
+button[tab] {
+	border:none;
+	border-bottom: none;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+	
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	background-image: linear-gradient(#dcdcdc, #eaeaea);
+	box-shadow : none;
+}
+
+button[tab]:active {
+	padding-top: 2px;
+	padding-bottom: 0px;
+}
+
+button[tab]:hover {
+	background-image: linear-gradient(#eee, #ddd);
+	border: none;
+}
+
+button[tab]:checked {
+	background-image: linear-gradient(tomato 2px, white 2px, #eee);
+}
+
+combobox>button {
+	box-shadow: none;
+	border-radius: 0px;
+	background-image: none;
+	background-color: transparent;
+	border: none;
+	color: black;
+}
+
+combobox:focus > button {
+	color: tomato;
+}
+
+checkbox {
+	font-size: 11pt;
+	font-family: 굴림;
+	text-align: left;
+	background-color: transparent;
+	border-width: 1px;
+	border-style: none;
+	border-color: gray;
+	border-radius: 4px;
+}
+
+checkbox:disabled {
+	color: gray;
+	background-color: gray;
+}
+
+radio {
+	font-size: 11pt;
+	font-family: 굴림;
+	text-align: left;
+	background-color: transparent;
+	border-width: 1px;
+	border-style: none;
+	border-color: gray;
+	border-radius: 4px;
+}
+
+list, treeview {
+	border: solid 1px gray;
+	border-radius: 4px;
+}
+
+.list-item {
+	border-radius: 0px;
+	border-style: none;
+	background-color: transparent;
+	color: black;
+	font-size: 12px;
+}
+
+check-button {
+	background-color: orange;
+}
+
+slide>button {
+	border-radius: 0px;
+}
+
+slide {
+	border: solid 1px gray;
+}
+
+tooltip {
+	background-color: tomato;
+	color: white;
+	text-align: center;
+	border-radius: 4px;
+}
+
+.scrollbar-thumb {
+	background-color: orange;
+}
+.scroll-btn {
+	background-color: #F1F1F1;
+}
+
+.scroll-btn-hover {
+	background-color: #cfcfcf;
+}
+
+.scroll-btn-active {
+	background-color: #8f8f8f;
+}
+label {
+	font-size: 11pt;
+	font-weight: normal;
+	border-width: 1px;
+	border-style: none;
+	border-color: gray;
+	background-color: transparent;
+	font-family: 굴림;
+	color: black;
+	background-color: rgba(0, 0, 0, 0);
+}
+
+output {
+	background-color: rgba(0, 0, 0, 0);
+}
+
+line {
+	border: solid 1px black;
+}
+
+rectangle {
+	border: solid 1px black;
+}
+
+ellipse {
+	border: solid 1px black;
+}
+
+roundrect {
+	border: solid 1px black;
+}
+
+image {
+	background-color: transparent;
+}
+
+.updated-row-image {
+	background-image: url(../images/builder2/row-update.jpg); 
+}
+.updated-sel-row-image {
+	background-image: url(../images/builder2/row-sel-update.jpg); 
+}
+.added-row-image {
+		background-image: url(../images/builder2/row-add.jpg);
+}
+.added-sel-row-image {
+		background-image: url(../images/builder2/row-sel-add.jpg);
+}
+.deleted-row-image {
+		background-image: url(../images/builder2/row-delete.jpg);
+}
+.deleted-sel-row-image {
+		background-image: url(../images/builder2/row-sel-delete.jpg);
+}
+.default-row-image {
+		background-image: url(../images/builder2/row-open.jpg);
+}
+.default-sel-row-image {
+		background-image: url(../images/builder2/row-sel-open.jpg);
+}
+
+/* Repeat CSS Start*/
+repeat {
+	border: solid 1px gray;
+	border-radius: 0px;
+	box-shadow:0px 0px 10px red;
+}
+
+repeat>group>* {
+	border-radius: 0px;
+	box-shadow: none;
+	border: solid 1px gray;
+	background-color: transparent;
+}
+
+repeat>group>button {
+	/* button쪽에서 바꿀 까봐 임시로 넣음*/
+	background-image: linear-gradient(#f8f8f8, #e5e5e5);
+	background-color: #f8f8f8;
+	border: solid 1px #c5c5c5;
+}
+
+repeat>group>output {
+	border: none;
+	font-size: 10px;
+}
+
+repeat>group>input:focus {
+	box-shadow: none;
+}
+
+.repeat-focus-row {
+	background-color: #e0e0e0;
+}
+
+.repeat-over-row {
+	background-color: #ededed;
+}
+
+.repeat-between-row {
+	background-color: #fafafa;
+}
+
+.repeat-row-line {
+	color: #ededed;
+}
+
+.repeat-drag-ctrl {
+	border: dotted 2px #808080;
+}
+
+.repeat-fixed-col {
+	border: double 1px #c5c5c5;
+}
+
+.repeat-focus-col {
+	border: dotted 1px #000000;
+}
+/* Repeat CSS End*/
+calendar {
+	border: solid 1px #707070;
+	content: "theme : gray";
+}
+
+.rectangle-cal {
+	border: solid 0px black;
+}
+
+.rectangle-cal-today {
+	border: solid 1px #808080;
+	border-radius: 5px;
+}
+
+.calendar-top-rect {
+	border: solid 1px gray;
+	background-color: #707070;
+	color: white;
+	font: bold 12px tahoma;
+}
+
+.calendar-top-rect2 {
+	background: #707070;
+}
+
+.calendar-bottom-rect {
+	border: solid 1px gray;
+	background-color: #c0c0c0;
+	color: white;
+	font: bold 14px sans-serif;
+}
+
+.calendar-bottom-rect2 {
+	background: #e7e7e7;
+}
+
+.calendar-bottom-btn-rect {
+	border: solid 1px gray;
+	background-color: #ffffff;
+	color: white;
+	font: bold 14px sans-serif;
+}
+
+.calendar-bottom-btn-rect2 {
+	background: #c0c0c0;
+}
+
+.calendar-day-rect {
+	border: solid 1px #c0c0c0;
+	background: #c0c0c0;
+}
+
+.calendar-day-rect2 {
+	background: #e7e7e7;
+}
+
+.calendar-day {
+	border: solid 1px gray;
+	background-color: orange;
+	color: #000000;
+	font: bold 12px sans-serif;
+}
+
+.calendar-today {
+	border: solid 1px gray;
+	background-color: #cacaca;
+	color: #000;
+	font: bold 11px tahoma;
+}
+
+.calendar-spin-rect {
+	border: solid 1px #555555;
+	background-color: transparent;
+}
+
+.calendar-triangle-rect {
+	border: solid 1px #2d2d2d;
+	background-color: #ffffff;
+}
+
+.calendar-this-date {
+	color: #000;
+	font: normal 11px 나눔고딕;
+}
+
+.calendar-prev-date {
+	color: #909090;
+	font: 11px sans-serif;
+}
+
+.calendar-click-date {
+	color: #000;
+	font: bold 15px 나눔고딕;
+}

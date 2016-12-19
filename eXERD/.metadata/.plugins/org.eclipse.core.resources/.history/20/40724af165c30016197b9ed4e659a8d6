@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tm:TermDictionary xmlns:tm="http://exerd.com/term-model" version="1.1">
+  <term name="번호" physicalName="NO" physicalDescription="NO"/>
+  <term name="직원" physicalName="EMP" physicalDescription="EMP"/>
+  <term name="부서" physicalName="DEPT" physicalDescription="DEPT"/>
+  <term name="이름" physicalName="NAME" physicalDescription="NAME"/>
+  <term name="직급" physicalName="JOB" physicalDescription="JOB"/>
+  <term name="소재지" physicalName="LOC" physicalDescription="LOC"/>
+  <term name="관리자" physicalName="MGR" physicalDescription="MGR"/>
+  <term name="고용" physicalName="HIRE"/>
+  <term name="급여" physicalName="SAL" physicalDescription="SAL"/>
+  <term name="수수료" physicalName="COMM" physicalDescription="COMM"/>
+  <term name="등급" physicalName="GRADE" physicalDescription="GRADE"/>
+  <term name="최고" physicalName="MAX" physicalDescription="MAX"/>
+  <term name="최저" physicalName="MIN" physicalDescription="MIN"/>
+  <term name="일" physicalName="DATE" physicalDescription="HIREDATE"/>
+  <tag name="비용"/>
+</tm:TermDictionary>

@@ -1,0 +1,70 @@
+/*
+ *source      : common.css
+ *description : Common Style Sheet File
+ */
+
+.srchLblComn
+{
+	font-size:9pt;
+	font-weight:bold;
+	color:#717171;
+	text-align:right;		
+}
+
+.srchDataComn
+{
+	font-size:9pt;
+	background-color:#FFFFFF;
+	disable-bgcolor:#EAEAEA;
+	border-style:solid;
+	border-color:#7F9DB9	
+}
+
+.srchBtnComn
+{
+	border-width:1px;
+    border-style:none;
+    disable-bgcolor:#C9D7E6;
+	font-size:9pt;
+	font-weight:bold;
+	color:#000000;
+}
+
+.rptMain
+{
+	border-style:3d;
+}
+
+
+.rptHead
+{
+	height:22;
+	font-size:9pt;
+	font-family:Arial;
+	color:#666666;
+	font-weight:bold;
+	background-color:#C6C6C6;
+    text-align:center;
+	border-width:1;
+    border-color:#ACA899;
+    border-style:solid;
+}
+
+.rptBody
+{
+	height:20;
+	font-size:9pt;
+	font-family:Arial;
+	background-color:#FCFCFC;
+	border-width:1;
+	border-color:#ACA899;
+	border-style:solid;
+    vertical-align:middle;
+}
+
+.rptBgr
+{
+	background-color:#c0c0c0;
+	border-style:solid;
+	border-color:#c0c0c0;
+}

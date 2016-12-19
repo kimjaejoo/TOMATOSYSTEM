@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>openDlg</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="pyramid-theme" value="gray">
+<script type="text/javascript" src="../../scripts/pyramid.js"></script>
+<link rel="icon" type="image/x-icon" href="./pyramid/images/favicon.ico"/>
+<script type="text/javaScript">
+	function initForm() {
+	    var query = window.location.search.substring(1);
+	    var vars = query.split("&");
+	    var src = null;
+	    var xtmSrc = null;
+	    var modelId = null;
+	    var parentId = null;
+	    var i;
+
+	    for (i = 0; i < vars.length; i++) {
+	        src = vars[i].split("=");
+	        if (src[0] == "modelId") modelId = src[1];
+	        else if(src[0] == "src") xtmSrc = src[1];
+	        else if(src[0] == "parentId") parentId = src[1];
+	    }
+	    var manager = new tmt.viewer.Manager();
+	    var sURL = xtmSrc;
+	    var viewer = manager.createViewer();
+	    var resource = {
+	         image : "../images/"
+	        , doc : "../doc/"
+	        , css : "../css/"
+	        , locale : "../locale/"
+	    };
+	    manager.setCommonResourcePath(resource);
+	    viewer.setSrc(sURL);
+	    viewer.setTargetDivId("container");
+	    viewer.setControlName(modelId);
+	    manager.addViewer(viewer);
+	    manager.useAsync(true);
+	    if(parentId != null){
+	        manager.setPopup(true, parentId);
+	        //dragiframe.js 이용한 iframe drag
+		    addHandle(document.getElementsByTagName('body').item(0), window);
+	    }
+	    manager.apply(manager.MODE.ADD);
+	}
+</script>
+</head>
+<body topmargin='0' leftmargin='0' onLoad="initForm();">
+	<div id="container" class="eXstory_divCanvas"></div>
+</body>
+</html>
